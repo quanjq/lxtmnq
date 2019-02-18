@@ -1,0 +1,8 @@
+<uwsgi> 
+    <socket>127.0.0.1:8005</socket><!-- 内部端口，自定义 -->
+    <chdir>/app/django-code/lxtmnq/</chdir><!-- 项目路径 -->
+    <module>lxtmnq.wsgi</module>
+    <processes>1</processes> <!-- 进程数 -->
+    <daemonize>uwsgi.log</daemonize><!-- 日志文件 -->
+    <vacuum>true</vacuum>
+</uwsgi>

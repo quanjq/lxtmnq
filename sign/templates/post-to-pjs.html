@@ -1,0 +1,23 @@
+<html>
+ <head><meta charset="utf-8"></head>
+ <body>
+      <div>
+          回调pjs的url:<br>
+          <textarea id="urlid" name="msg_recevieUrl" form="sform_update" style="width:500px;height:30px;">{{ recevieUrl }}</textarea><br>
+          接收到的报文解析后的数据xml:<br>
+        <textarea id="textareaid" name="msg_from_pjs" form="sform_update" style="width:500px;height:300px;">{{ encryptedText }}</textarea><br>
+          联信通返回给pjs的数据:<br>
+        <textarea id="retmsgid" name="msg_from_lxt"  form="sform_update" style="width:500px;height:100px;">{{ retmsg }}</textarea><br>
+       <form id="sform_update" action="/update-action/"  method="post">
+          <button class="bsubmit" type="submit">修改联信通返回给pjs的数据</button>
+      </form>
+
+    </div>
+      <form id="sform" action={{recevieUrl}} method="post">
+          <input  name="encryptMsg" style="width:500px;height:50px;"  value={{encryptMsg}} />
+          <button class="bsubmit" type="submit">提交报文</button>
+      </form>
+ <!--<script type="text/javascript">document.all.sform.submit();</script>-->
+
+ </body>
+</html>

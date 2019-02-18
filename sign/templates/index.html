@@ -1,0 +1,22 @@
+
+<html>
+ <head><meta charset="utf-8"></head>
+ <body>
+      <div>
+         回调pjs的url:<br>
+          <textarea id="urlid" style="width:500px;height:30px;">{{ recevieUrl }}</textarea><br>
+      </div>
+      <div>
+        接收到的报文解析后的数据xml:<br>
+        <textarea id="textareaid" style="width:500px;height:100px;">{{ encryptedText }}</textarea><br>
+        建行/联信通返回给pjs的数据:<br>
+        <textarea id="retmsgid" style="width:500px;height:100px;">{{ retmsg }}</textarea><br>
+    </div>
+      <form id="sform" action={{recevieUrl}} method="post">
+          <input  name="encryptMsg"  value={{encryptMsg}} />
+          <button class="bsubmit" type="submit">提交报文</button>
+      </form>
+ <!--<script type="text/javascript">document.all.sform.submit();</script>-->
+
+ </body>
+</html>
